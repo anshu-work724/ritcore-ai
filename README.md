@@ -1,77 +1,66 @@
-# React + TypeScript + Vite
+# Ritcore AI - Corporate Agency Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Ritcore AI is a premium, high-converting multi-page website built for an elite IT solutions and software engineering agency. The application showcases advanced full-stack capabilities, mobile app developments, and architectural solutions using a modern black-design gradient theme, high-end interactive components, and standard linting.
 
-Currently, two official plugins are available:
+## 🚀 Tech Stack & Core Architecture
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- **Frontend & Styling:** React.js, Tailwind CSS (JS-TW setup, no TypeScript)
+- **Component Libraries:** [shadcn/ui](https://ui.shadcn.com/) (primitives), [react-bits](https://reactbits.dev/) (animated canvas interactions)
+- **Code Standards & Linting:** Strict **ESLint** integration (oxlint explicitly omitted)
+- **Design Theme:** Premium multi-layer black gradient (`bg-gradient-to-b` from deep pitch black to dark charcoal/slate tones) with clean glassmorphism navigation elements.
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🛠️ Project Features & Structure
 
-## Expanding the ESLint configuration
+### 1. Home & Services
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- **Interactive Canvas Background:** Uses the `react-bits` `<DotGrid>` component inside the Hero section with customized physical feedback configurations.
+- **Core Agency Services Offered:**
+  - Web Development (High performance, modern web)
+  - Mobile Application Development (Cross-platform Flutter, Native Kotlin & Swift)
+  - Full-Stack Web Apps (End-to-end secure architecture, MERN apps)
+  - Existing App Modification (Legacy code refactoring, feature enhancements)
+- **Technical Competencies:** Interactive marquee display highlighting Node.js, Express, MongoDB, MySQL, Firebase, AWS, Azure, GitHub Version Control, and deployment configurations.
+- **Client Testimonials & FAQs:** Interactive shadcn accordion interface addressing platform publishing (App Store / Play Store deployment) and architectural upgrades.
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+### 2. Live Portfolio Showcase
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+Polished production grid showing active engineering histories, feature lists, and dynamic access CTAs:
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+1. **BoomPop** - Scalable backend microservice architecture and secure API infrastructure for corporate event planning.
+2. **Adani One** - Premium lifestyle, travel, and flight booking application. (Available on Play Store & App Store)
+3. **Tata Neu** - Comprehensive lifestyle super-app integrating multi-faceted services from the Tata Group. (Available on Play Store & App Store)
+4. **WeCura / WeCura-Pro** - Dual-sided healthcare workflow tracking and patient appointment management apps. (Available on Play Store & App Store)
+5. **Tata Studi** - Interactive E-learning application serving K-12 with integrated multimedia learning modules. (Available on Play Store & App Store)
+6. **Tata Early Edge** - Immersive early childhood multimedia E-learning platform. (Available on Play Store & App Store)
+7. **CE Polite** - Live digital whiteboard layout for educators supporting real-time freehand vector canvas rendering.
+8. **Adani FarmPik** - Agritech direct-to-buyer supply chain logistics platform with transactional protocols. (Available on Play Store & App Store)
 
+### 3. Industrial Internships
+
+- **Strategic Guardrails:** Clear informational callout distinguishing Ritcore AI as a live production software house rather than an academic training institute.
+- **Application Workflow:** Clean input interface driven by shadcn form modules gathering:
+  - Full Name
+  - Email Address
+  - Mobile Number
+  - Domain Selection Dropdown (_Frontend Web Development, Full-Stack MERN, Mobile App Development, Backend Engineering & Cloud Architecture_)
+
+### 4. Contact Us
+
+- Direct communication portal providing explicit enterprise endpoints:
+  - Email: `contact@ritcoreai.com` (Fully integrated `mailto:` interface)
+  - Hiring / Corporate Queries: `+91 9389628434`
+  - WhatsApp Integration: Direct API action link Routing to `+91 9389628434`
+
+---
+
+## ⚡ Setup & Configuration
+
+### 1. Clone & Install Dependencies
+
+```bash
+git clone [https://github.com/your-organization/ritcore-ai-web.git](https://github.com/your-organization/ritcore-ai-web.git)
+cd ritcore-ai-web
+npm install
 ```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
-```
-# ritcore-ai
-# ritcore-ai

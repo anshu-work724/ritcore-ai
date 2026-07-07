@@ -1,51 +1,61 @@
-import { useState, useEffect } from 'react'
-import { Link, useLocation } from 'react-router-dom'
-import { Menu, X } from 'lucide-react'
+import { useState, useEffect } from "react";
+import { Link, useLocation } from "react-router-dom";
+import { Menu, X } from "lucide-react";
+import ritcoreLogo from "../assets/ritcore-ai.png";
 
 const navLinks = [
-  { label: 'Home', href: '/' },
-  { label: 'Services', href: '/#services' },
-  { label: 'Portfolio', href: '/portfolio' },
-  { label: 'Internships', href: '/internships' },
-  { label: 'FAQs', href: '/#faqs' },
-  { label: 'Contact Us', href: '/contact' },
-]
+  { label: "Home", href: "/" },
+  { label: "Services", href: "/services" },
+  { label: "Portfolio", href: "/portfolio" },
+  { label: "Internships", href: "/internships" },
+  { label: "FAQs", href: "/#faqs" },
+  { label: "Contact Us", href: "/contact" },
+];
 
 export default function Navbar() {
-  const [open, setOpen] = useState(false)
-  const [scrolled, setScrolled] = useState(false)
-  const location = useLocation()
+  const [open, setOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+  const location = useLocation();
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 20)
-    window.addEventListener('scroll', onScroll, { passive: true })
-    return () => window.removeEventListener('scroll', onScroll)
-  }, [])
+    const onScroll = () => setScrolled(window.scrollY > 20);
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   useEffect(() => {
-    setOpen(false)
-  }, [location.pathname])
+    if (open) {
+      setOpen(false);
+    }
+  }, [location.pathname, open]);
 
   return (
     <header
       id="navbar"
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
-          ? 'bg-black/70 backdrop-blur-xl border-b border-white/10 shadow-2xl'
-          : 'bg-transparent'
+          ? "bg-black/70 backdrop-blur-xl border-b border-white/10 shadow-2xl"
+          : "bg-transparent"
       }`}
     >
       <div className="container-max px-6 flex items-center justify-between h-16 lg:h-18">
-        {/* Logo */}
-        <Link to="/" className="flex items-center gap-2 select-none group" aria-label="Ritcore AI Home">
-          <span className="text-xl font-bold tracking-tight">
-            <span className="gradient-text">Ritcore</span>
-            <span className="text-white/80 font-light"> AI</span>
-          </span>
+        <Link
+          to="/"
+          className="flex items-center gap-2 select-none group"
+          aria-label="Ritcore AI Home"
+        >
+          <img
+            src={ritcoreLogo}
+            alt="Ritcore AI"
+            className="h-9 w-auto rounded-full object-contain"
+          />
         </Link>
 
         {/* Desktop nav */}
-        <nav className="hidden md:flex items-center gap-1" aria-label="Primary navigation">
+        <nav
+          className="hidden md:flex items-center gap-1"
+          aria-label="Primary navigation"
+        >
           {navLinks.map((link) => (
             <Link
               key={link.href}
@@ -63,7 +73,9 @@ export default function Navbar() {
             to="/contact"
             id="nav-get-quote"
             className="hidden sm:inline-flex items-center px-4 py-2 text-sm font-semibold rounded-lg text-black transition-all duration-200 hover:opacity-90 hover:scale-105 active:scale-95"
-            style={{ background: 'linear-gradient(135deg, #7dd3e8 0%, #9b7fe8 100%)' }}
+            style={{
+              background: "linear-gradient(135deg, #7dd3e8 0%, #9b7fe8 100%)",
+            }}
           >
             Get a Quote
           </Link>
@@ -82,7 +94,7 @@ export default function Navbar() {
       {/* Mobile drawer */}
       <div
         className={`md:hidden overflow-hidden transition-all duration-300 ${
-          open ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
+          open ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
         }`}
       >
         <nav
@@ -102,7 +114,9 @@ export default function Navbar() {
           <Link
             to="/contact"
             className="mt-2 flex items-center justify-center px-4 py-2.5 text-sm font-semibold rounded-lg text-black"
-            style={{ background: 'linear-gradient(135deg, #7dd3e8 0%, #9b7fe8 100%)' }}
+            style={{
+              background: "linear-gradient(135deg, #7dd3e8 0%, #9b7fe8 100%)",
+            }}
             onClick={() => setOpen(false)}
           >
             Get a Quote
@@ -110,5 +124,5 @@ export default function Navbar() {
         </nav>
       </div>
     </header>
-  )
+  );
 }

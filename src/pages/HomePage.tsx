@@ -1,6 +1,6 @@
-import { useState } from "react";
 import { Link } from "react-router-dom";
 import DotGrid from "../components/DotGrid";
+import Testimonials from "../components/services/Testimonials";
 import {
   Card,
   CardContent,
@@ -22,9 +22,6 @@ import {
   Cloud,
   Palette,
   TrendingUp,
-  Star,
-  ChevronLeft,
-  ChevronRight,
 } from "lucide-react";
 
 const services = [
@@ -87,39 +84,6 @@ const techStack = [
   "Redis",
 ];
 
-const testimonials = [
-  {
-    name: "Arjun Mehta",
-    role: "CEO, FinEdge",
-    text: "Ritcore AI delivered our fintech dashboard in 3 weeks — pixel-perfect and lightning-fast. Genuinely impressed by their engineering quality.",
-    rating: 5,
-  },
-  {
-    name: "Priya Sharma",
-    role: "Founder, EduSpark",
-    text: "The mobile app they built for us has 4.8★ on Play Store. Their attention to detail and communication throughout was exceptional.",
-    rating: 5,
-  },
-  {
-    name: "Rahul Verma",
-    role: "CTO, LogiTrack",
-    text: "The AI-powered route optimisation they integrated saved us 23% in logistics costs. Their ML team really knows what they're doing.",
-    rating: 5,
-  },
-  {
-    name: "Sneha Kapoor",
-    role: "Product Manager, HealthOS",
-    text: "We had a complex backend migration — Ritcore's cloud team made it seamless with zero downtime. Highly recommend.",
-    rating: 5,
-  },
-  {
-    name: "Vikram Nair",
-    role: "Director, TravelHive",
-    text: "Their UI/UX refresh tripled our conversion rate. The new design language is modern, consistent, and beautifully crafted.",
-    rating: 5,
-  },
-];
-
 const faqs = [
   {
     q: "What is the typical project timeline?",
@@ -144,13 +108,6 @@ const faqs = [
 ];
 
 export default function HomePage() {
-  const [activeTestimonial, setActiveTestimonial] = useState(0);
-  const prev = () =>
-    setActiveTestimonial(
-      (i) => (i - 1 + testimonials.length) % testimonials.length,
-    );
-  const next = () => setActiveTestimonial((i) => (i + 1) % testimonials.length);
-
   return (
     <>
       {/* Hero */}
@@ -168,7 +125,7 @@ export default function HomePage() {
             proximity={140}
             speedTrigger={80}
             shockRadius={220}
-            shockStrength={4}
+            shockStrength={8}
             className="w-full h-full"
             style={{}}
           />
@@ -196,13 +153,15 @@ export default function HomePage() {
             id="hero-headline"
             className="text-5xl sm:text-6xl lg:text-7xl font-bold leading-none tracking-tight mb-6"
           >
-            We Build
-            <span className="block gradient-text mt-2">Digital Futures</span>
+            Your Vision Our Code,
+            <span className="block gradient-text mt-2">
+              Limitless Possibilities
+            </span>
           </h1>
           <p className="text-lg sm:text-xl text-white/55 leading-relaxed max-w-2xl mx-auto mb-10">
-            Ritcore AI crafts high-performance web apps, mobile products, and
-            AI-powered solutions that scale. From idea to launch — beautifully
-            engineered.
+            We transform ambitious ideas into high-performance software
+            solutions, tailored, scalable, and built to drive real business
+            results.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link
@@ -247,19 +206,17 @@ export default function HomePage() {
       {/* Services */}
       <section id="services" className="section-padding">
         <div className="container-max">
-          <div className="text-center mb-16">
-            <span
-              className="text-xs font-semibold uppercase tracking-widest"
-              style={{ color: "#7dd3e8" }}
-            >
+          <div className="text-center mb-10">
+            <h2 className="block text-5xl font-extrabold uppercase tracking-wider gradient-text mb-9">
               What We Do
-            </span>
-            <h2 className="text-4xl lg:text-5xl font-bold text-white mt-3 mb-4">
-              Services Built for <span className="gradient-text">Scale</span>
             </h2>
-            <p className="text-white/50 text-lg max-w-2xl mx-auto">
-              End-to-end digital solutions — from concept design to production
-              deployment.
+            <p className="text-white/50 text-lg mx-auto">
+              we turn ambitious ideas into high-performance software solutions —
+              tailored, scalable, and built for real business impact. Backed by
+              talent that has shaped projects for leading global brands, we
+              specialize in custom development, cloud solutions, system
+              integration, and IT consulting. Your Vision, Our Code Limitless
+              Possibilities.
             </p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
@@ -330,86 +287,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Testimonials */}
-      <section className="section-padding">
-        <div className="container-max">
-          <div className="text-center mb-16">
-            <span
-              className="text-xs font-semibold uppercase tracking-widest"
-              style={{ color: "#9b7fe8" }}
-            >
-              Client Stories
-            </span>
-            <h2 className="text-4xl lg:text-5xl font-bold text-white mt-3">
-              Trusted by <span className="gradient-text">Builders</span>
-            </h2>
-          </div>
-          <div className="max-w-3xl mx-auto">
-            <div className="glass rounded-2xl p-8 lg:p-12 relative overflow-hidden">
-              <div
-                className="absolute -top-20 -right-20 w-64 h-64 rounded-full pointer-events-none"
-                style={{
-                  background:
-                    "radial-gradient(circle, rgba(155,127,232,0.08) 0%, transparent 70%)",
-                }}
-              />
-              <div className="flex gap-1 mb-6">
-                {Array.from({
-                  length: testimonials[activeTestimonial].rating,
-                }).map((_, i) => (
-                  <Star
-                    key={i}
-                    size={16}
-                    className="fill-yellow-400 text-yellow-400"
-                  />
-                ))}
-              </div>
-              <blockquote className="text-xl lg:text-2xl text-white/85 leading-relaxed font-light mb-8">
-                "{testimonials[activeTestimonial].text}"
-              </blockquote>
-              <div className="flex items-center justify-between">
-                <div>
-                  <div className="text-white font-semibold">
-                    {testimonials[activeTestimonial].name}
-                  </div>
-                  <div className="text-white/40 text-sm">
-                    {testimonials[activeTestimonial].role}
-                  </div>
-                </div>
-                <div className="flex gap-2">
-                  <button
-                    id="testimonial-prev"
-                    onClick={prev}
-                    aria-label="Previous"
-                    className="w-9 h-9 rounded-full flex items-center justify-center border border-white/15 text-white/60 hover:text-white hover:border-white/40 transition-all"
-                  >
-                    <ChevronLeft size={16} />
-                  </button>
-                  <button
-                    id="testimonial-next"
-                    onClick={next}
-                    aria-label="Next"
-                    className="w-9 h-9 rounded-full flex items-center justify-center border border-white/15 text-white/60 hover:text-white hover:border-white/40 transition-all"
-                  >
-                    <ChevronRight size={16} />
-                  </button>
-                </div>
-              </div>
-              <div className="flex gap-1.5 mt-6">
-                {testimonials.map((_, i) => (
-                  <button
-                    key={i}
-                    id={`testimonial-dot-${i}`}
-                    onClick={() => setActiveTestimonial(i)}
-                    aria-label={`Testimonial ${i + 1}`}
-                    className={`h-1.5 rounded-full transition-all duration-300 ${i === activeTestimonial ? "w-6 bg-cyan-400" : "w-1.5 bg-white/20 hover:bg-white/40"}`}
-                  />
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <Testimonials />
 
       {/* FAQs */}
       <section id="faqs" className="section-padding border-t border-white/5">

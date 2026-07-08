@@ -14,98 +14,10 @@ import {
   AccordionTrigger,
   AccordionContent,
 } from "../components/ui/accordion";
-import {
-  ArrowRight,
-  Globe,
-  Smartphone,
-  Brain,
-  Cloud,
-  Palette,
-  TrendingUp,
-} from "lucide-react";
+import { ArrowRight } from "lucide-react";
 
-const services = [
-  {
-    icon: Globe,
-    title: "Web Development",
-    desc: "Blazing-fast, SEO-optimised websites and full-stack apps built with modern frameworks.",
-    color: "#7dd3e8",
-  },
-  {
-    icon: Smartphone,
-    title: "Mobile Apps",
-    desc: "Cross-platform iOS & Android apps with native performance and App Store / Play Store publishing.",
-    color: "#9b7fe8",
-  },
-  {
-    icon: Brain,
-    title: "AI & ML Solutions",
-    desc: "Custom machine-learning models, NLP pipelines, and AI-powered features integrated into your product.",
-    color: "#f8c471",
-  },
-  {
-    icon: Cloud,
-    title: "Cloud Infrastructure",
-    desc: "Scalable, secure cloud architecture on AWS / GCP / Azure with CI/CD and DevOps automation.",
-    color: "#7dd3e8",
-  },
-  {
-    icon: Palette,
-    title: "UI/UX Design",
-    desc: "Research-driven design systems, prototypes, and pixel-perfect interfaces that convert.",
-    color: "#e88fa8",
-  },
-  {
-    icon: TrendingUp,
-    title: "SEO & Marketing",
-    desc: "Technical SEO audits, content strategy, and performance optimisation to grow organic traffic.",
-    color: "#7ddd88",
-  },
-];
-
-const techStack = [
-  "React",
-  "Next.js",
-  "TypeScript",
-  "Node.js",
-  "Python",
-  "FastAPI",
-  "PostgreSQL",
-  "MongoDB",
-  "Docker",
-  "Kubernetes",
-  "AWS",
-  "GCP",
-  "TensorFlow",
-  "PyTorch",
-  "Flutter",
-  "Figma",
-  "GraphQL",
-  "Redis",
-];
-
-const faqs = [
-  {
-    q: "What is the typical project timeline?",
-    a: "Most projects are delivered within 2–8 weeks depending on scope. We provide a detailed timeline after the discovery call and never miss deadlines.",
-  },
-  {
-    q: "Do you offer post-launch support?",
-    a: "Yes — all projects include 30 days of free bug-fix support. We also offer monthly retainer plans for ongoing maintenance, feature additions, and monitoring.",
-  },
-  {
-    q: "How do you handle confidentiality?",
-    a: "We sign NDAs before any project discussion. All code is delivered to you with full IP ownership — we retain no rights to your product.",
-  },
-  {
-    q: "What technologies do you specialise in?",
-    a: "Our core stack covers React, Next.js, Node.js, Python/FastAPI, React Native, Flutter, AWS/GCP, and modern AI/ML frameworks including TensorFlow and PyTorch.",
-  },
-  {
-    q: "Can I get a free consultation?",
-    a: "Absolutely. Book a free 30-minute discovery call via WhatsApp or email — no commitment required. We'll scope your project and share a transparent quote.",
-  },
-];
+import { faqs } from "../data/faqs";
+import { services, techStack } from "../data/stackAndServiceshHomepage";
 
 export default function HomePage() {
   return (

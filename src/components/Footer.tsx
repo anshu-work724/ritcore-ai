@@ -33,12 +33,12 @@ const footerLinks: Array<{ title: string; links: FooterLink[] }> = [
     links: [
       {
         label: "Privacy Policy",
-        href: "../src/assets/documents/privacy-policy.pdf",
+        href: "../public/documents/privacy-policy.pdf",
         external: true,
       },
       {
         label: "Terms and Conditions",
-        href: "../src/assets/documents/terms-and-conditions.pdf",
+        href: "../public/documents/terms-and-conditions.pdf",
         external: true,
       },
     ],

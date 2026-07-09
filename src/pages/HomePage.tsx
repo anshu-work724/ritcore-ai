@@ -8,15 +8,8 @@ import {
   CardTitle,
   CardDescription,
 } from "../components/ui/card";
-import {
-  Accordion,
-  AccordionItem,
-  AccordionTrigger,
-  AccordionContent,
-} from "../components/ui/accordion";
-import { ArrowRight } from "lucide-react";
 
-import { faqs } from "../data/faqs";
+import { ArrowRight } from "lucide-react";
 import { services, techStack } from "../data/stackAndServiceshHomepage";
 
 export default function HomePage() {
@@ -200,39 +193,6 @@ export default function HomePage() {
       </section>
 
       <Testimonials />
-
-      {/* FAQs */}
-      <section id="faqs" className="section-padding border-t border-white/5">
-        <div className="container-max max-w-3xl">
-          <div className="text-center mb-14">
-            <span
-              className="text-xs font-semibold uppercase tracking-widest"
-              style={{ color: "#7dd3e8" }}
-            >
-              FAQ
-            </span>
-            <h2 className="text-4xl lg:text-5xl font-bold text-white mt-3 mb-4">
-              Common <span className="gradient-text">Questions</span>
-            </h2>
-          </div>
-          <Accordion type="single" collapsible className="space-y-3">
-            {faqs.map((faq, i) => (
-              <AccordionItem
-                key={i}
-                value={`faq-${i}`}
-                className="glass rounded-xl border-white/8 px-6 py-1"
-              >
-                <AccordionTrigger className="text-white/90 text-base font-medium py-5 hover:no-underline">
-                  {faq.q}
-                </AccordionTrigger>
-                <AccordionContent className="text-white/55 text-sm leading-relaxed pb-5">
-                  {faq.a}
-                </AccordionContent>
-              </AccordionItem>
-            ))}
-          </Accordion>
-        </div>
-      </section>
 
       {/* CTA Banner */}
       <section className="section-padding">

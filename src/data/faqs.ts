@@ -1,42 +1,42 @@
 export const faqs = [
   {
-    q: "What services does Ritcore AI provide?",
-    a: "Ritcore AI delivers end-to-end digital solutions, including custom web development, mobile applications, AI-powered software, UI/UX design, cloud infrastructure, and technology consulting. Every solution is tailored to your business objectives, ensuring scalability, performance, and long-term growth.",
+    q: "How do I start a project with Ritcore AI?",
+    a: "Getting started is simple. Reach out to us through our website, WhatsApp, or email with your project idea or business requirement. We'll schedule a discovery call to understand your goals, discuss possible solutions, answer your questions, and provide a detailed proposal with estimated timelines, deliverables, and pricing before any development begins.",
   },
   {
-    q: "How long does it take to complete a project?",
-    a: "The development timeline depends on the project's complexity, features, and requirements. Smaller projects may take a few weeks, while enterprise-grade solutions require more time. Before development begins, we provide a detailed roadmap with milestones and estimated delivery dates.",
+    q: "How long does a typical project take?",
+    a: "Every project is different, so the timeline depends on its scope, complexity, and required features. A business website may take only a few weeks, while larger web platforms, mobile applications, or AI-powered systems require more development time. Before starting, we share a clear roadmap with milestones so you always know what to expect.",
   },
   {
-    q: "How do you ensure the quality of your work?",
-    a: "Quality is integrated into every stage of our development process. From planning and UI/UX validation to code reviews, testing, security checks, and performance optimization, we ensure every solution meets high standards before deployment.",
+    q: "Will I own the source code after the project is completed?",
+    a: "Yes. Once the project is completed and all contractual obligations have been fulfilled, you receive full ownership of the source code, project files, documentation, and other deliverables. We believe your product should remain entirely under your control, giving you the freedom to maintain, expand, or transfer it whenever needed.",
   },
   {
-    q: "Will I receive the complete source code and ownership?",
-    a: "Yes. Once the project is completed and all agreed payments are fulfilled, you receive complete ownership of the source code, project assets, documentation, and intellectual property, giving you full control over your product.",
+    q: "Can you improve or continue an existing project?",
+    a: "Absolutely. Whether your project was developed by another company or an in-house team, we can review the existing codebase, identify improvement opportunities, fix issues, modernize outdated technology, and continue development while maintaining stability and minimizing disruption to your business.",
   },
   {
-    q: "Can you integrate with our existing software or APIs?",
-    a: "Absolutely. We have experience integrating third-party APIs, payment gateways, CRM platforms, ERP systems, cloud services, and legacy software while maintaining security, reliability, and seamless performance.",
+    q: "Do you sign Non-Disclosure Agreements (NDAs)?",
+    a: "Yes. We understand that many projects involve confidential business ideas and sensitive information. We are happy to sign a Non-Disclosure Agreement (NDA) before discussing your project in detail, ensuring your intellectual property and business information remain protected throughout our collaboration.",
   },
   {
-    q: "Do you provide maintenance and ongoing support?",
-    a: "Yes. We offer post-launch maintenance plans that include bug fixes, performance monitoring, security updates, feature enhancements, and technical support to ensure your application continues to perform efficiently as your business grows.",
+    q: "Do you provide support after deployment?",
+    a: "Yes. Our relationship doesn't end after launch. We provide post-deployment support, including bug fixes, security updates, performance improvements, monitoring, and ongoing feature development. We also offer flexible maintenance plans to ensure your software continues to perform reliably as your business grows.",
   },
   {
-    q: "How do you protect sensitive business information?",
-    a: "We take data security and confidentiality seriously. We are happy to sign Non-Disclosure Agreements (NDAs), follow secure development practices, and ensure that all project information, code, and business data remain protected throughout the engagement.",
+    q: "Which technologies do you work with?",
+    a: "Our team works with a wide range of modern technologies, including React, Next.js, TypeScript, Node.js, Python, Flutter, React Native, MongoDB, PostgreSQL, AWS, and leading AI frameworks. We choose technologies based on your project's requirements to ensure scalability, security, and long-term maintainability.",
   },
   {
-    q: "Can you build AI-powered solutions for my business?",
-    a: "Yes. Our team develops intelligent AI-driven applications such as chatbots, workflow automation tools, recommendation systems, predictive analytics platforms, and custom AI integrations designed to improve business efficiency and customer experiences.",
+    q: "Can you build AI-powered solutions?",
+    a: "Yes. We design and develop AI-driven solutions that help businesses automate workflows, improve customer experiences, and make data-driven decisions. This includes intelligent chatbots, recommendation systems, document processing, workflow automation, predictive analytics, and custom AI integrations tailored to your business needs.",
   },
   {
-    q: "What industries do you work with?",
-    a: "We work with startups, small businesses, and enterprises across industries including healthcare, finance, education, e-commerce, logistics, travel, and technology. Our solutions are customized to meet the unique challenges and goals of each industry.",
+    q: "How is project pricing decided?",
+    a: "Project pricing is based on factors such as project scope, technical complexity, required features, timeline, and integrations. After understanding your requirements, we provide a transparent quotation with a detailed breakdown of deliverables, ensuring there are no hidden costs or unexpected charges during development.",
   },
   {
-    q: "How do I get started with Ritcore AI?",
-    a: "Getting started is simple. Contact us through our website, email, or WhatsApp to schedule a free consultation. We'll discuss your requirements, understand your business goals, recommend the right solution, and provide a transparent project proposal with estimated timelines.",
+    q: "Can you work with international clients?",
+    a: "Yes. We collaborate with clients from different countries using modern communication and project management tools. Regular progress updates, scheduled meetings, milestone-based delivery, and transparent communication ensure a smooth and efficient development process regardless of your location or time zone.",
   },
 ];

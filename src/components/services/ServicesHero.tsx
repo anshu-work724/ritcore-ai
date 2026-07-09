@@ -5,7 +5,7 @@ export default function ServicesHero() {
   return (
     <section className="relative flex min-h-[80svh] items-center justify-center overflow-hidden px-6 pt-24 pb-16">
       <div className="absolute inset-0 z-0">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(125,211,232,0.16),_transparent_45%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_15%,rgba(6,182,212,0.12),transparent_32%),radial-gradient(circle_at_80%_85%,rgba(139,92,246,0.12),transparent_35%),linear-gradient(to_bottom,#0B0F14,#050608,#000000)]" />
         <div className="absolute inset-0 bg-[linear-gradient(120deg,rgba(255,255,255,0.02),transparent_45%,rgba(155,127,232,0.04))]" />
       </div>
       <div className="relative z-10 mx-auto max-w-4xl text-center">

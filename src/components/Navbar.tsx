@@ -8,7 +8,6 @@ const navLinks = [
   { label: "Services", href: "/services" },
   { label: "Portfolio", href: "/portfolio" },
   { label: "Internships", href: "/internships" },
-  { label: "FAQs", href: "/#faqs" },
   { label: "Contact Us", href: "/contact" },
 ];
 
@@ -35,7 +34,7 @@ export default function Navbar() {
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
           ? "bg-black/70 backdrop-blur-xl border-b border-white/10 shadow-2xl"
-          : "bg-transparent"
+          : "bg-transparent "
       }`}
     >
       <div className="container-max px-6 flex items-center justify-between h-16 lg:h-18">

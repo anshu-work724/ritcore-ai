@@ -15,7 +15,20 @@ type projectLink = {
   type: "playstore" | "appstore" | "external";
 };
 
-const portfolioData = [
+type Project = {
+  id: string;
+  title: string;
+  category: string;
+  categoryColor: string;
+  accentGradient: string;
+  logoUrl: string;
+  description: string;
+  tags: string[];
+  links: projectLink[];
+  mockupUrl: string;
+};
+
+const portfolioData: Project[] = [
   {
     id: "boompop",
     title: "BoomPop",
@@ -221,7 +234,7 @@ export default function App() {
     activeFilter === "All" ? true : project.category === activeFilter,
   );
 
-  const renderButton = (link:projectLink) => {
+  const renderButton = (link: projectLink) => {
     if (link.type === "playstore") {
       return (
         <a

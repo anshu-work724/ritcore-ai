@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { ExternalLink, Play, Apple } from "lucide-react";
 import boomPopImg from "../assets/portfolio/boom.png";
 import adaniImg from "../assets/portfolio/adani.png";
@@ -8,6 +8,12 @@ import tataEarlyEdgeImg from "../assets/portfolio/tata-early-edge.png";
 import tataNeuImg from "../assets/portfolio/tata-neu-app.png";
 import tataStudiImg from "../assets/portfolio/tata-studi.png";
 import weCuraImg from "../assets/portfolio/we-cura.png";
+
+type projectLink = {
+  text: string;
+  url: string;
+  type: "playstore" | "appstore" | "external";
+};
 
 const portfolioData = [
   {
@@ -215,7 +221,7 @@ export default function App() {
     activeFilter === "All" ? true : project.category === activeFilter,
   );
 
-  const renderButton = (link) => {
+  const renderButton = (link:projectLink) => {
     if (link.type === "playstore") {
       return (
         <a

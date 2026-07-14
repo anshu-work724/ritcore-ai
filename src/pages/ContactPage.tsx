@@ -155,7 +155,7 @@ export default function ContactPage() {
             </p>
 
             <a
-              href="https://wa.me/919389628434"
+              href="https://wa.me/919389628434?text='Hello, I'm interested in learning more about your services.'"
               target="_blank"
               rel="noopener noreferrer"
               id="contact-whatsapp-btn"

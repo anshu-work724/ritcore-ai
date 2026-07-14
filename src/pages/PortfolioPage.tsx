@@ -8,6 +8,17 @@ import tataEarlyEdgeImg from "../assets/portfolio/tata-early-edge.png";
 import tataNeuImg from "../assets/portfolio/tata-neu-app.png";
 import tataStudiImg from "../assets/portfolio/tata-studi.png";
 import weCuraImg from "../assets/portfolio/we-cura.png";
+import sofyImg from "../assets/portfolio/sofy.png";
+
+import boomPopLogo from "../assets/portfolio/logos/boom-pop-logo.png";
+import adaniLogo from "../assets/portfolio/logos/adani-one-logo.png";
+import farmpikLogo from "../assets/portfolio/logos/farmpik-logo.png";
+import sofyLogo from '../assets/portfolio/logos/sofy-logo.png';
+import tataEarlyEdgeLogo from "../assets/portfolio/logos/tata-early-edge-logo.png";
+import cePoliteLogo from "../assets/portfolio/logos/tata-ce-polite-logo.png";
+import tataNeuLogo from "../assets/portfolio/logos/tata-neu-logo.png";
+import tataStudiLogo from "../assets/portfolio/logos/tata-studi-logo.png";
+import weCuraLogo from "../assets/portfolio/logos/we-cura-logo.png";
 
 type projectLink = {
   text: string;
@@ -36,8 +47,7 @@ const portfolioData: Project[] = [
     categoryColor: "text-blue-400",
     // Using a subtle blue glow inspired by the screenshot's light blue background
     accentGradient: "from-blue-600/10 to-indigo-600/10",
-    logoUrl:
-      "https://ui-avatars.com/api/?name=BP&background=2563EB&color=fff&rounded=true",
+    logoUrl: boomPopLogo,
     description:
       "Built The Backend System For This Leading Platform In Corporate Event Planning And Remote Team Experiences. Our Work Involved Secure API Development, Microservice Architecture, And Scalable Server-Side Infrastructure.",
     tags: ["React", "Node.js", "Microservices"], // Inferred tags, you can update these
@@ -46,15 +56,14 @@ const portfolioData: Project[] = [
     ],
     mockupUrl: boomPopImg,
   },
-  {
+{
     id: "adani-one",
     title: "Adani One",
     category: "Mobile App",
     categoryColor: "text-orange-400",
     // Subtle peach/orange glow
     accentGradient: "from-orange-500/10 to-red-500/10",
-    logoUrl:
-      "https://ui-avatars.com/api/?name=AO&background=EA580C&color=fff&rounded=true",
+    logoUrl: adaniLogo,
     description:
       "Adani One Is A Lifestyle And Travel App That Streamlines The Travel Experience By Providing Features Like Flight Bookings, Airport Services, Real-Time Updates, Loyalty Programs, And Exclusive Offers, All In One Seamless Platform.",
     tags: ["Flutter", "React Native", "API Integration"],
@@ -73,14 +82,38 @@ const portfolioData: Project[] = [
     mockupUrl: adaniImg,
   },
   {
+    id: "sofyclub",
+    title: "Sofy Club",
+    category: "Mobile App",
+    categoryColor: "text-red-300",
+    // Using a subtle blue glow inspired by the screenshot's light blue background
+    accentGradient: "from-blue-300/10 to-indigo-400/10",
+    logoUrl: sofyLogo,
+    description:
+      "Built The Backend System For This Leading Platform In Corporate Event Planning And Remote Team Experiences. Our Work Involved Secure API Development, Microservice Architecture, And Scalable Server-Side Infrastructure.",
+    tags: ["React", "Node.js", "Microservices"], // Inferred tags, you can update these
+    links: [
+      {
+        text: "App Store",
+        url: "https://apps.apple.com/in/app/sofy-club/id6504254725",
+        type: "appstore",
+      },
+      {
+        text: "Play Store",
+        url: "https://play.google.com/store/apps/details?id=com.unicharm.sofyclub&hl=en_IN",
+        type: "playstore",
+      },
+    ],
+    mockupUrl: sofyImg,
+  },
+  {
     id: "tata-neu",
     title: "Tata Neu",
     category: "Website & Mobile App",
     categoryColor: "text-purple-400",
     // Subtle purple/blue glow
     accentGradient: "from-purple-500/10 to-blue-500/10",
-    logoUrl:
-      "https://ui-avatars.com/api/?name=TN&background=000&color=fff&rounded=true",
+    logoUrl: tataNeuLogo,
     description:
       "Tata Neu Is A Comprehensive Lifestyle App Offering Seamless Shopping, Travel And Payment Experiences, Integrating Various Services From The Tata Group Into One Platform For Enhanced User Engagement.",
     tags: ["React", "iOS", "Android", "E-commerce"],
@@ -105,8 +138,7 @@ const portfolioData: Project[] = [
     categoryColor: "text-cyan-400",
     // Subtle cyan glow
     accentGradient: "from-cyan-500/10 to-blue-500/10",
-    logoUrl:
-      "https://ui-avatars.com/api/?name=WC&background=06B6D4&color=fff&rounded=true",
+    logoUrl: weCuraLogo,
     description:
       "WeCura And WeCura Pro Are Healthcare Management Apps That Enable Patient Communication, Appointment Scheduling, And Medical Record Tracking. The Apps Aim To Simplify Healthcare Services For Both Patients And Medical Professionals.",
     tags: ["Healthcare", "Mobile", "Scheduling"],
@@ -131,8 +163,7 @@ const portfolioData: Project[] = [
     categoryColor: "text-blue-500",
     // Subtle dark blue glow
     accentGradient: "from-blue-500/10 to-indigo-500/10",
-    logoUrl:
-      "https://ui-avatars.com/api/?name=TS&background=3B82F6&color=fff&rounded=true",
+    logoUrl: tataStudiLogo,
     description:
       "Tata Studi Is An E-Learning Application For Nursery To 12th Grade Students. Designed To Connect All State Boards, The App Focuses On Developing Better Learning Habits In Students And Includes Features Like Big Idea Videos, Revision Videos, Practice Tests, Notes, Study Plans, Digital Tests, OMR Tests, And Assignments.",
     tags: ["EdTech", "Video Streaming", "Assessments"],
@@ -157,8 +188,7 @@ const portfolioData: Project[] = [
     categoryColor: "text-yellow-400",
     // Subtle yellow glow
     accentGradient: "from-yellow-500/10 to-amber-500/10",
-    logoUrl:
-      "https://ui-avatars.com/api/?name=TE&background=EAB308&color=fff&rounded=true",
+    logoUrl: tataEarlyEdgeLogo,
     description:
       "Tata EarlyEdge Home Is An E-Learning Application For Nursery, Junior KG, And Senior KG Students. Aimed At Fostering Better Learning Habits, The App Connects Various State Boards And Offers Books, Videos, Worksheets, Audio, Notes, Ebooks, And Images For An Interactive Learning Experience.",
     tags: ["EdTech", "Early Learning", "Interactive Content"],
@@ -183,8 +213,7 @@ const portfolioData: Project[] = [
     categoryColor: "text-blue-600",
     // Subtle deep blue glow
     accentGradient: "from-blue-600/10 to-blue-800/10",
-    logoUrl:
-      "https://ui-avatars.com/api/?name=CE&background=1D4ED8&color=fff&rounded=true",
+    logoUrl: cePoliteLogo,
     description:
       "An Interactive Whiteboard App For Teachers, CE Polite Allows Educators To Manage All Syllabus-Related Content Assigned To Them. It Enables The Creation Of Notes Using Multiple Shapes And Freehand Drawing, Which Are Saved In Relation To The Content Being Taught. This App Enhances The Teaching Experience By Offering Video, Quiz, And Other Content-Related Resources.",
     tags: ["EdTech", "Whiteboard", "WebRTC"],
@@ -204,8 +233,7 @@ const portfolioData: Project[] = [
     categoryColor: "text-green-500",
     // Subtle green glow
     accentGradient: "from-green-500/10 to-emerald-500/10",
-    logoUrl:
-      "https://ui-avatars.com/api/?name=AF&background=22C55E&color=fff&rounded=true",
+    logoUrl: farmpikLogo,
     description:
       "Adani FarmPik Connects Farmers With Buyers To Improve Market Access. The Platform Offers Features Such As Product Listings, Order Management, And Secure Transactions, Helping To Streamline The Farming Supply Chain.",
     tags: ["AgriTech", "Marketplace", "Mobile"],
@@ -328,16 +356,24 @@ export default function App() {
               >
                 {/* Text Content Block */}
                 <div className="flex-1 space-y-6 w-full">
-                  {/* Category Pill & Logo (Optional: removing logo to stay closer to original dark theme, but keeping pill) */}
-                  <div
-                    className={`inline-block border border-white/10 bg-white/5 px-3 py-1 rounded-full text-xs font-medium tracking-wide ${project.categoryColor}`}
-                  >
-                    {project.category}
+                  {/* Logo (Optional: removing logo to stay closer to original dark theme, but keeping pill) */}
+                  <div className="w-16 h-16 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-md flex items-center justify-center">
+                    <img
+                      src={project.logoUrl}
+                      alt={project.title}
+                      className="w-full h-full object-contain"
+                    />
                   </div>
 
                   <h2 className="text-3xl md:text-5xl font-bold text-white tracking-tight">
                     {project.title}
                   </h2>
+                  {/* Category Pill */}
+                  <div
+                    className={`inline-flex border border-white/10 bg-white/5 px-3 py-1 rounded-full text-xs font-medium tracking-wide ${project.categoryColor}`}
+                  >
+                    {project.category}
+                  </div>
 
                   <p className="text-base md:text-lg leading-relaxed text-gray-400 max-w-xl">
                     {project.description}

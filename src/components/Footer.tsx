@@ -168,7 +168,7 @@ export default function Footer() {
 
               {/* Email */}
               <a
-                href="mailto:ritcoreai@gmail.com"
+                href="mailto:info@ritcoreai.com"
                 aria-label="Email"
                 className="flex h-9 w-9 items-center justify-center rounded-lg border border-white/8 bg-white/5 text-white/50 transition-all duration-200 hover:border-cyan-500/40 hover:bg-cyan-500/40 hover:text-cyan-400"
               >

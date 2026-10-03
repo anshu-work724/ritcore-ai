@@ -19,9 +19,9 @@ const contactCards = [
   {
     icon: Mail,
     label: 'Email Us',
-    value: 'ritcore.ai@gmail.com',
+    value: 'info@ritcoreai.com',
     desc: 'For project enquiries, quotes, and general questions.',
-    href: 'mailto:ritcore.ai@gmail.com',
+    href: 'mailto:info@ritcoreai.com',
     color: '#7dd3e8',
     id: 'contact-card-email',
   },
